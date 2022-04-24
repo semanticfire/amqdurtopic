@@ -15,6 +15,17 @@ Now when a message is publised on the durable topic, the reader URI will get the
 This can be observed by repeatedly getting the reader URI `http://localhost:8080/amqtest/ReadTopic?id=test&subid=blah1234` and seeing the same messages, only after the 7th time it will wait and return `OK`
 
 
+## Running the testcase
+Expected behaviour server
+```
+mvn clean package tomee:run
+```
+
+Problematic behaviour server
+```
+mvn clean package tomee:run -Dtomee.version=8.0.5
+```
+
 ## Curl Commands
 putting a message on the topic
 ```

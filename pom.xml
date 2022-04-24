@@ -6,6 +6,7 @@
 	<packaging>war</packaging>
 	<name>AMQ Durable Topic Testcase</name>
 	<properties>
+		<tomee.version>8.0.4</tomee.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<hostname>${env.HOSTNAME}-${user.name}</hostname>
@@ -53,6 +54,17 @@
 				<version>2.5.3</version>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomee.maven</groupId>
+				<artifactId>tomee-maven-plugin</artifactId>
+				<version>${tomee.version}</version>
+				<configuration>
+					<tomeeVersion>${tomee.version}</tomeeVersion>
+					<tomeeClassifier>plus</tomeeClassifier>
+					<removeTomeeWebapp>true</removeTomeeWebapp>
+				</configuration>
+				
 			</plugin>
 		</plugins>
 		<finalName>amqtest</finalName>

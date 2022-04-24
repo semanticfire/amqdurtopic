@@ -88,7 +88,7 @@ public class ReadTopic extends HttpServlet {
 
 			
 
-			Message m = consumer.receive(30000);
+			Message m = consumer.receive(5000);
 			if (m instanceof TextMessage) {
 				TextMessage message = (TextMessage) m;
 				out.print(message.getText());

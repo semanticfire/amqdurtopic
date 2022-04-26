@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Resource id="RI_JMS_Durrable_Connection_Factory" type="TopicConnectionFactory">
+        TransactionSupport none
+    </Resource>
+</resources>
